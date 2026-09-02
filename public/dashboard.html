@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>NutriGram - Dashboard</title>
+
+
+<!-- Bootstrap -->
+
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+>
+
+
+<!-- Bootstrap Icons -->
+
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+>
+
+
+<!-- NutriGram CSS -->
+
+<link
+    rel="stylesheet"
+    href="css/style.css"
+>
+```
+
+</head>
+
+<body>
+
+<!-- =========================================
+     NAVBAR
+     ========================================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+
+```
+<div class="container">
+
+    <a
+        class="navbar-brand"
+        href="index.html"
+    >
+        🥗 NutriGram
+    </a>
+
+
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+    >
+
+        <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+
+    <div
+        class="collapse navbar-collapse"
+        id="navbarNav"
+    >
+
+        <ul class="navbar-nav ms-auto">
+
+            <li class="nav-item">
+
+                <a
+                    class="nav-link"
+                    href="index.html"
+                >
+                    Home
+                </a>
+
+            </li>
+
+
+            <li class="nav-item">
+
+                <a
+                    class="nav-link"
+                    href="children.html"
+                >
+                    Child Records
+                </a>
+
+            </li>
+
+
+            <li class="nav-item">
+
+                <a
+                    class="nav-link"
+                    href="about.html"
+                >
+                    About
+                </a>
+
+            </li>
+
+
+            <li class="nav-item">
+
+                <a
+                    class="nav-link"
+                    href="services.html"
+                >
+                    Services
+                </a>
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+```
+
+</nav>
+
+<!-- =========================================
+     DASHBOARD HEADER
+     ========================================= -->
+
+<main class="container py-5">
+
+```
+<div class="dashboard-header">
+
+    <div>
+
+        <span class="dashboard-label">
+
+            NUTRITION MONITORING
+
+        </span>
+
+
+        <h1 class="dashboard-title">
+
+            🥗 NutriGram Dashboard
+
+        </h1>
+
+
+        <p class="dashboard-description">
+
+            Monitor the nutritional status and growth
+            of children registered at the Anganavadi.
+
+        </p>
+
+    </div>
+
+
+    <a
+        href="children.html"
+        class="btn btn-success dashboard-action"
+    >
+
+        <i class="bi bi-people-fill me-2"></i>
+
+        View Children
+
+    </a>
+
+</div>
+
+
+
+<!-- =========================================
+     SUMMARY CARDS
+     ========================================= -->
+
+<div class="row g-4 mt-2">
+
+
+    <!-- TOTAL -->
+
+    <div class="col-lg-3 col-md-6">
+
+        <div
+            class="dashboard-stat-card total-card"
+        >
+
+            <div class="stat-icon">
+
+                <i class="bi bi-people-fill"></i>
+
+            </div>
+
+
+            <div>
+
+                <p class="stat-label">
+                    Total Children
+                </p>
+
+
+                <span
+                    id="totalChildren"
+                    class="stat-number"
+                >
+                    0
+                </span>
+
+
+                <p class="stat-subtitle">
+                    Registered children
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- GOOD -->
+
+    <div class="col-lg-3 col-md-6">
+
+        <div
+            class="dashboard-stat-card good-card"
+            id="goodNutritionCard"
+        >
+
+            <div class="stat-icon">
+
+                <i class="bi bi-heart-fill"></i>
+
+            </div>
+
+
+            <div>
+
+                <p class="stat-label">
+                    Good Nutrition
+                </p>
+
+
+                <span
+                    id="goodNutrition"
+                    class="stat-number"
+                >
+                    0
+                </span>
+
+
+                <p class="stat-subtitle">
+                    Healthy nutrition status
+                </p>
+
+            </div>
+
+
+            <i class="bi bi-arrow-up-right card-arrow"></i>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- IMPROVEMENT -->
+
+    <div class="col-lg-3 col-md-6">
+
+        <div
+            class="dashboard-stat-card improvement-card"
+            id="needsImprovementCard"
+        >
+
+            <div class="stat-icon">
+
+                <i class="bi bi-exclamation-circle-fill"></i>
+
+            </div>
+
+
+            <div>
+
+                <p class="stat-label">
+                    Needs Improvement
+                </p>
+
+
+                <span
+                    id="needsImprovement"
+                    class="stat-number"
+                >
+                    0
+                </span>
+
+
+                <p class="stat-subtitle">
+                    Nutrition needs attention
+                </p>
+
+            </div>
+
+
+            <i class="bi bi-arrow-up-right card-arrow"></i>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- AT RISK -->
+
+    <div class="col-lg-3 col-md-6">
+
+        <div
+            class="dashboard-stat-card risk-card"
+            id="atRiskCard"
+        >
+
+            <div class="stat-icon">
+
+                <i class="bi bi-shield-exclamation"></i>
+
+            </div>
+
+
+            <div>
+
+                <p class="stat-label">
+                    At Risk
+                </p>
+
+
+                <span
+                    id="atRisk"
+                    class="stat-number"
+                >
+                    0
+                </span>
+
+
+                <p class="stat-subtitle">
+                    Requires attention
+                </p>
+
+            </div>
+
+
+            <i class="bi bi-arrow-up-right card-arrow"></i>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =========================================
+     CHILDREN OVERVIEW
+     ========================================= -->
+
+<div class="dashboard-section mt-5">
+
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="section-label">
+                RECORDS
+            </span>
+
+
+            <h2>
+                Children Overview
+            </h2>
+
+
+            <p>
+                Review nutrition information and current status.
+            </p>
+
+        </div>
+
+
+        <a
+            href="children.html"
+            class="btn btn-outline-success"
+        >
+
+            <i class="bi bi-list-ul me-2"></i>
+
+            All Records
+
+        </a>
+
+    </div>
+
+
+
+    <div class="dashboard-table-card">
+
+        <div class="table-responsive">
+
+            <table
+                class="table dashboard-table align-middle"
+            >
+
+                <thead>
+
+                    <tr>
+
+                        <th>Name</th>
+
+                        <th>Age</th>
+
+                        <th>Gender</th>
+
+                        <th>Height</th>
+
+                        <th>Weight</th>
+
+                        <th>Eggs</th>
+
+                        <th>Milk</th>
+
+                        <th>Vegetables</th>
+
+                        <th>Status</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="childrenTableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     ATTENTION SECTION
+     ========================================= -->
+
+<div class="attention-section mt-5">
+
+
+    <div class="attention-header">
+
+        <div>
+
+            <span class="section-label">
+                MONITORING
+            </span>
+
+
+            <h2>
+                👶 Children Requiring Attention
+            </h2>
+
+
+            <p>
+                Children whose recorded nutrition factors
+                may need improvement.
+            </p>
+
+        </div>
+
+
+        <div class="attention-icon">
+
+            <i class="bi bi-heart-pulse-fill"></i>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="attentionChildren"
+        class="attention-content"
+    >
+
+        <p class="text-muted mb-0">
+
+            Loading children...
+
+        </p>
+
+    </div>
+
+</div>
+```
+
+</main>
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+></script>
+
+<!-- NutriGram JS -->
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

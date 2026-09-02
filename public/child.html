@@ -1,0 +1,608 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Child - NutriGram</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+        crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="container py-4">
+
+        <!-- ==========================================
+             NAVBAR
+        =========================================== -->
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success rounded-4 shadow-sm mb-5">
+
+            <div class="container-fluid">
+
+                <a class="navbar-brand fw-bold" href="index.html">
+                    🥗 NutriGram
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarNav">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="children.html">
+
+                                <i class="bi bi-people-fill me-1"></i>
+                                Child Records
+
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="about.html">
+
+                                <i class="bi bi-info-circle me-1"></i>
+                                About
+
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="services.html">
+
+                                <i class="bi bi-heart-pulse me-1"></i>
+                                Services
+
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="contact.html">
+
+                                <i class="bi bi-envelope me-1"></i>
+                                Contact
+
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+        <!-- ==========================================
+             PAGE HEADER
+        =========================================== -->
+
+        <section class="text-center mb-5">
+
+            <div class="mb-3">
+
+                <span
+                    class="d-inline-flex align-items-center justify-content-center rounded-circle bg-success bg-opacity-10"
+                    style="width: 75px; height: 75px;">
+
+                    <i
+                        class="bi bi-person-plus-fill text-success"
+                        style="font-size: 35px;">
+                    </i>
+
+                </span>
+
+            </div>
+
+            <h1 class="child-title mb-2">
+                Add New Child
+            </h1>
+
+            <p class="child-description mb-0">
+                Enter the child's health, growth and food information
+                to create a nutrition record.
+            </p>
+
+        </section>
+
+
+        <!-- ==========================================
+             FORM CARD
+        =========================================== -->
+
+        <div class="card border-0 shadow-lg child-form-card rounded-4">
+
+            <div class="card-body p-4 p-md-5">
+
+                <form id="childForm">
+
+
+                    <!-- ==========================================
+                         SECTION 1 - CHILD INFORMATION
+                    =========================================== -->
+
+                    <div class="form-section mb-5">
+
+                        <div class="d-flex align-items-center mb-4">
+
+                            <div
+                                class="section-icon bg-success bg-opacity-10 text-success rounded-3 me-3">
+
+                                <i class="bi bi-person-vcard-fill"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h4 class="mb-1 fw-bold">
+                                    Child Information
+                                </h4>
+
+                                <p class="text-muted mb-0">
+                                    Basic details about the child
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="row g-4">
+
+                            <!-- Child Name -->
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="childname"
+                                    class="form-label fw-semibold">
+
+                                    <i class="bi bi-person me-1 text-success"></i>
+                                    Child Name
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control form-control-lg"
+                                    id="childname"
+                                    placeholder="Enter child's name">
+
+                            </div>
+
+
+                            <!-- Age -->
+
+                            <div class="col-md-3">
+
+                                <label
+                                    for="age"
+                                    class="form-label fw-semibold">
+
+                                    <i class="bi bi-calendar3 me-1 text-success"></i>
+                                    Age
+
+                                </label>
+
+                                <input
+                                    type="number"
+                                    class="form-control form-control-lg"
+                                    id="age"
+                                    placeholder="Age"
+                                    min="1">
+
+                            </div>
+
+
+                            <!-- Gender -->
+
+                            <div class="col-md-3">
+
+                                <label
+                                    for="gender"
+                                    class="form-label fw-semibold">
+
+                                    <i class="bi bi-gender-ambiguous me-1 text-success"></i>
+                                    Gender
+
+                                </label>
+
+                                <select
+                                    class="form-select form-select-lg"
+                                    id="gender">
+
+                                    <option value="" selected>
+                                        Choose...
+                                    </option>
+
+                                    <option value="male">
+                                        Male
+                                    </option>
+
+                                    <option value="female">
+                                        Female
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ==========================================
+                         SECTION 2 - GROWTH MEASUREMENTS
+                    =========================================== -->
+
+                    <div class="form-section mb-5">
+
+                        <div class="d-flex align-items-center mb-4">
+
+                            <div
+                                class="section-icon bg-primary bg-opacity-10 text-primary rounded-3 me-3">
+
+                                <i class="bi bi-rulers"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h4 class="mb-1 fw-bold">
+                                    Growth Measurements
+                                </h4>
+
+                                <p class="text-muted mb-0">
+                                    Record the child's current height and weight
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="row g-4">
+
+                            <!-- Height -->
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="height"
+                                    class="form-label fw-semibold">
+
+                                    <i class="bi bi-arrows-vertical me-1 text-primary"></i>
+                                    Height (cm)
+
+                                </label>
+
+                                <div class="input-group input-group-lg">
+
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="height"
+                                        placeholder="Enter height"
+                                        min="1"
+                                        step="0.1">
+
+                                    <span class="input-group-text">
+                                        cm
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Weight -->
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="weight"
+                                    class="form-label fw-semibold">
+
+                                    <i class="bi bi-speedometer2 me-1 text-primary"></i>
+                                    Weight (kg)
+
+                                </label>
+
+                                <div class="input-group input-group-lg">
+
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="weight"
+                                        placeholder="Enter weight"
+                                        min="1"
+                                        step="0.1">
+
+                                    <span class="input-group-text">
+                                        kg
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ==========================================
+                         SECTION 3 - FOOD & NUTRITION
+                    =========================================== -->
+
+                    <div class="form-section mb-5">
+
+                        <div class="d-flex align-items-center mb-4">
+
+                            <div
+                                class="section-icon bg-warning bg-opacity-10 text-warning rounded-3 me-3">
+
+                                <i class="bi bi-egg-fried"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h4 class="mb-1 fw-bold">
+                                    Food & Nutrition
+                                </h4>
+
+                                <p class="text-muted mb-0">
+                                    Record the child's regular food intake
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="row g-4">
+
+                            <!-- Eggs -->
+
+                            <div class="col-md-4">
+
+                                <label
+                                    for="eggIntake"
+                                    class="form-label fw-semibold">
+
+                                    <i class="bi bi-egg me-1 text-warning"></i>
+                                    Eggs per Week
+
+                                </label>
+
+                                <input
+                                    type="number"
+                                    class="form-control form-control-lg"
+                                    id="eggIntake"
+                                    placeholder="Number of eggs"
+                                    min="0">
+
+                                <small class="text-muted">
+                                    Enter the number of eggs eaten in one week.
+                                </small>
+
+                            </div>
+
+
+                            <!-- Milk -->
+
+                            <div class="col-md-4">
+
+                                <label
+                                    for="milkIntake"
+                                    class="form-label fw-semibold">
+
+                                    <i class="bi bi-cup-straw me-1 text-info"></i>
+                                    Milk Intake
+
+                                </label>
+
+                                <select
+                                    class="form-select form-select-lg"
+                                    id="milkIntake">
+
+                                    <option value="" selected>
+                                        Select option
+                                    </option>
+
+                                    <option>
+                                        1-2 times
+                                    </option>
+
+                                    <option>
+                                        3-4 times
+                                    </option>
+
+                                    <option>
+                                        5-6 times
+                                    </option>
+
+                                    <option>
+                                        7 or more times
+                                    </option>
+
+                                </select>
+
+                                <small class="text-muted">
+                                    How often the child drinks milk.
+                                </small>
+
+                            </div>
+
+
+                            <!-- Vegetables -->
+
+                            <div class="col-md-4">
+
+                                <label
+                                    for="vegetableIntake"
+                                    class="form-label fw-semibold">
+
+                                    <i class="bi bi-leaf me-1 text-success"></i>
+                                    Vegetable Intake
+
+                                </label>
+
+                                <select
+                                    class="form-select form-select-lg"
+                                    id="vegetableIntake">
+
+                                    <option value="" selected>
+                                        Select option
+                                    </option>
+
+                                    <option>
+                                        3-4 times a week
+                                    </option>
+
+                                    <option>
+                                        1-2 times a week
+                                    </option>
+
+                                    <option>
+                                        rarely
+                                    </option>
+
+                                </select>
+
+                                <small class="text-muted">
+                                    Frequency of vegetable consumption.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ==========================================
+                         SAVE AREA
+                    =========================================== -->
+
+                    <div class="border-top pt-4">
+
+                        <div
+                            class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+
+                            <div class="text-muted small">
+
+                                <i class="bi bi-shield-check text-success me-1"></i>
+
+                                Information will be saved securely
+                                to the child's nutrition record.
+
+                            </div>
+
+
+                            <div class="d-flex gap-2">
+
+                                <a
+                                    href="children.html"
+                                    class="btn btn-outline-secondary btn-lg px-4">
+
+                                    <i class="bi bi-arrow-left me-2"></i>
+                                    Cancel
+
+                                </a>
+
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-success btn-lg px-4">
+
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    Save Child Information
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==========================================
+             BOTTOM TIP
+        =========================================== -->
+
+        <div class="text-center mt-4 mb-3">
+
+            <p class="text-muted small mb-0">
+
+                <i class="bi bi-lightbulb text-warning me-1"></i>
+
+                Accurate measurements help NutriGram provide
+                better nutrition recommendations.
+
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- NutriGram JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

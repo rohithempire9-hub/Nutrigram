@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Child - NutriGram</title>
+
+    <!--Bootstrap CSS-->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+        crossorigin="anonymous">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">  
+</head>
+<body>
+    <main class="container py-5">
+        <h1 class="child-title">Edit Child</h1>
+
+        <p class="child-description">Enter the child’s health and food information.</p>
+        <div class="card shadow-sm child-form-card">
+            <div class="card-body">
+                <form id="editChildForm">
+                    <div class="mb-3">
+                        <label for="childname" class="form-label">Child Name</label>
+                        <input type="text" class="form-control" id="childname" placeholder="Enter child's name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="age" class="form-label">Age</label>
+                        <input type="number" class="form-control" id="age" placeholder="Enter child's age">
+                    </div>
+                    <div class="mb-3">
+                        <label for="gender" class="form-label">Gender</label>
+                        <select class="form-select" id="gender">
+                            <option value="" selected>Choose...</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="height" class="form-label">Height(cm)</label>
+                        <input type="number" class="form-control" id="height" placeholder="Enter the height">
+                    </div>
+                    <div class="mb-3">
+                        <label for="weight" class="form-label">Weight(kg)</label>
+                        <input type="number" class="form-control" id="weight" placeholder="Enter the Weight">
+                    </div>
+                    <div class="mb-3">
+                        <label for="eggIntake" class="form-label">Eggs eaten in a week</label>
+                        <input type="number" class="form-control" id="eggIntake" placeholder="Enter the number of eggs eaten in a week">
+                    </div>
+                    <div class="mb-3">
+                        <label for="milkIntake" class="form-label">Milk intake per week</label>
+                        <select class="form-select" id="milkIntake">
+                            <option value="" selected>Select option</option>
+                            <option>1-2 times</option>
+                            <option>3-4 times</option>
+                            <option>5-6 times</option>
+                            <option>7 or more times</option>
+                        </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="vegetableIntake" class="form-label">Vegetable intake in a period of time</label>
+                            <select class="form-select" id="vegetableIntake">
+                                <option value="" selected>Select option</option>
+                                <option>3-4 times a week</option>
+                                <option>1-2 times a week</option>
+                                <option>rarely</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">
+                            Save Changes
+                        </button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">NutriGram</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <li class="nav-item">
+                           <a class="nav-link" href="children.html">Child Records</a>
+                        </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Child - NutriGram</title>
+
+    <!--Bootstrap CSS-->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+        crossorigin="anonymous">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">  
+</head>
+<body>
+    <main class="container py-5">
+
+```
+<!-- Page Header -->
+<div class="records-header mb-4">
+
+    <div>
+        <span class="records-label">NUTRIGRAM</span>
+
+        <h1 class="records-title">
+            👶 Child Records
+        </h1>
+
+        <p class="records-description">
+            View and manage nutrition records for all registered children.
+        </p>
+    </div>
+
+    <a href="dashboard.html" class="btn btn-success records-back-btn">
+        <i class="bi bi-arrow-left"></i>
+        Dashboard
+    </a>
+
+    <a href="child.html" class="btn btn-primary">
+        <i class="bi bi-person-plus-fill"></i>
+        Add New Child
+    </a>
+
+</div>
+
+
+<!-- Active Filter -->
+<div id="filterStatus" class="mb-4"></div>
+
+<!-- Search & Quick Filters -->
+<div class="records-tools mb-4">
+
+    <div class="records-search">
+        <i class="bi bi-search"></i>
+
+        <input
+            type="text"
+            id="childSearch"
+            class="form-control"
+            placeholder="Search child by name..."
+        >
+    </div>
+
+    <div class="records-filter-buttons">
+
+        <button
+            type="button"
+            class="btn btn-outline-success active"
+            data-filter="all">
+            All
+        </button>
+
+        <button
+            type="button"
+            class="btn btn-outline-success"
+            data-filter="Good">
+            🟢 Good
+        </button>
+
+        <button
+            type="button"
+            class="btn btn-outline-warning"
+            data-filter="Needs Improvement">
+            🟡 Needs Improvement
+        </button>
+
+        <button
+            type="button"
+            class="btn btn-outline-danger"
+            data-filter="At Risk">
+            🔴 At Risk
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- Records Table -->
+<div class="records-card">
+
+<!-- Records Table -->
+<div class="records-card">
+
+    <div class="records-card-header">
+
+        <div>
+            <span class="section-label">
+                REGISTERED CHILDREN
+            </span>
+
+            <h2>
+                Nutrition Records
+            </h2>
+        </div>
+
+        <div class="records-icon">
+            <i class="bi bi-people-fill"></i>
+        </div>
+
+    </div>
+
+
+    <div class="table-responsive">
+
+        <table class="table records-table">
+
+            <thead>
+
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Height</th>
+                    <th>Weight</th>
+                    <th>Eggs / Week</th>
+                    <th>Milk Intake</th>
+                    <th>Vegetables</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="childrenTableBody">
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+```
+
+</main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
