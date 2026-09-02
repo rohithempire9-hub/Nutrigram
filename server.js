@@ -13,7 +13,7 @@ app.use("/api/children", childRoutes);
 
 app.use(express.static(path.join(__dirname, "public")));
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 mongoose
     .connect(process.env.MONGO_URI)
     .then(() => {
